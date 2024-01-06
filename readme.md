@@ -1,11 +1,11 @@
 # SEAL PROJECT 2
 
-- **Name: Daniel Ji**
-- **App Name: **
-- **Description: **
-- **Github URL: **
-- **Deployed Website: **
-- **Trello Board: **
+- **Name:** Daniel Ji
+- **App Name:** Watched(Movie Version)
+- **Description:** This app will allow users to create an account and track which movies they have seen by searching by Movie title.
+- **Github URL:** https://github.com/lldeejeell102/unit2-project2
+- **Deployed Website:** https://dj-unit2-project2.onrender.com/
+- **Trello Board:** https://trello.com/invite/b/Hysb1kbK/ATTId039f7ed01c0cc863ed8ff69544e3e50403A367A/unit2-project2
 
 ## List of Dependencies
 #### Node Dependicies (package.json)

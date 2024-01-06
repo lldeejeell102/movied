@@ -7,8 +7,8 @@ const morgan = require("morgan")
 const methodOverride = require("method-override")
 const mongoose = require("mongoose")
 
-const {DATABASE_URL, SECRET, PORT} = process.env
-
+const {DATABASE_URL, SECRET, PORT, URL_API} = process.env
+const URL = URL_API
 
 // DATABASE CONNECTION
 mongoose.connect(DATABASE_URL)
@@ -28,6 +28,7 @@ const app = express()
 //////////////////////////////////////////////////////////////////////////////////
 app.get("", (req, res) => {
     res.send("It's alive!")
+    // res.redirect(`${URL}&i=tt3896198`)
 })
 
 
