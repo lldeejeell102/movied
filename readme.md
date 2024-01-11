@@ -31,7 +31,7 @@
 | Route Name | Endpoint | Method | Description |
 | -----------| ---------| -------| ------------|
 | Movie Index | /movies | GET | Renders all movies by user |
-| Movie New | /movies/new | GET | Shows a form for a user to add movies to their list |
+| Movie New | /movies/add | GET | Shows a form for a user to add movies to their list |
 | Movie Create | /movies | POST | Adds movie to user's list |
 | Movie Edit | /movies/:id/edit | GET | Ability to change added movie to user's list |
 | Movie Update | /movies/:id | PUT | Ability to change added movie to user's list |
@@ -48,5 +48,4 @@
 
 ## ERD (Entity Relationship Diagram)
 <!-- This should be a diagram showing your models and any relationships between them. -->
-![Entity Relationship Diagram](./url-to-picture.jpg)
-
+![Entity Relationship Diagram](https://i.imgur.com/wgc4Ru4.png)
