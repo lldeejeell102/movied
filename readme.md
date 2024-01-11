@@ -1,4 +1,4 @@
-# SEAL PROJECT 2
+# MOVIED
 
 - **Name:** Daniel Ji
 - **App Name:** Movied
