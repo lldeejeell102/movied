@@ -16,6 +16,7 @@
 - ejs
 - express
 - express-session
+- method-override
 - mongoose
 - morgan
 
