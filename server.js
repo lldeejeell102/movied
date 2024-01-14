@@ -8,6 +8,7 @@ const methodOverride = require("method-override")
 const session = require("express-session")
 const MovieRouter = require("./controllers/movie.js")
 const UserRouter = require("./controllers/user.js")
+const MongoStore = require("connect-mongo")
 
 
 
@@ -26,6 +27,12 @@ app.use(morgan("dev"))
 app.use(methodOverride("_method"))
 app.use(express.urlencoded({ extended:true }))
 app.use(express.static("public"))
+app.use(session({
+    secret: process.env.SECRET,
+    store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL}),
+    saveUninitialized: true,
+    resave: false,
+}))
 
 
 
