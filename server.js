@@ -7,6 +7,8 @@ const morgan = require("morgan")
 const methodOverride = require("method-override")
 const session = require("express-session")
 const MovieRouter = require("./controllers/movie.js")
+const UserRouter = require("./controllers/user.js")
+
 
 
 
@@ -36,6 +38,8 @@ app.get("", (req, res) => {
 })
 
 app.use("/movies", MovieRouter)
+app.use("/user", UserRouter)
+
 
 //////////////////////////////////////////////////////////////////////////////////
 // LISENTER
