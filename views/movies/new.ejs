@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head.ejs") %>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <div class="search-movie-form">
+        <form action="/movies/search" method="POST">
+            <fieldset>
+                <legend>Look up a Movie</legend>
+                <input type="text" name="title" placeholder="by title..."> 
+                <input type="text" name="year" placeholder="by year...">
+                <button>Search</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

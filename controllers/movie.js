@@ -53,6 +53,32 @@ router.get("/", async (req, res) => {
     }
 })
 
+// NEW
+router.get("/add", (req, res) => {
+    res.render("movies/new.ejs")
+})
+
+// SEARCH
+router.post("/search", async (req, res) => {
+    const title = req.body.title
+    const year = req.body.year
+    console.log(title, year)
+    // build a link to movie API to get all movies matched, if not return message
+    res.redirect("/movies/add")
+})
+
+// CREATE/ADD
+// router.post("/", async (req, res) => {
+//     try{
+//         // const title = req.body.Title
+//         // const year = req.body.Year
+
+//     }catch(error) {
+//         console.log(error.message)
+//         res.send("There was an error, read logs for error details")
+//     }
+// })
+
 //////////////////////////////////////////////////////////////////////////////////
 // EXPORT ROUTER
 //////////////////////////////////////////////////////////////////////////////////
