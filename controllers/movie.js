@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 const express = require("express")
 const Movie = require("../models/Movie.js")
+const url = process.env.URL_API
 
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -15,7 +16,7 @@ const router = express.Router()
 // MIDDLEWARE
 //////////////////////////////////////////////////////////////////////////////////
 router.use((req, res, next) => {
-    console.table(req.session)
+    // console.table(req.session)
     if(req.session.loggedIn){
         next()
     } else{
@@ -59,13 +60,45 @@ router.get("/add", (req, res) => {
 })
 
 // SEARCH
-router.post("/search", async (req, res) => {
-    const title = req.body.title
-    const year = req.body.year
-    console.log(title, year)
-    // build a link to movie API to get all movies matched, if not return message
-    res.redirect("/movies/add")
+router.post("/results", async (req, res) => {
+    let title = req.body.title
+    let year = req.body.year
+    if (title.length !== 0 && year.length !== 0){
+        console.log("both inputs")
+        title = req.body.title.toLowerCase().replaceAll(" ","+")
+        year = req.body.year
+        const apiRequest = (`${url}&t=${title}&y=${year}`)
+        await fetch(apiRequest)
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            res.render("movies/results.ejs", {data})
+        })
+    }
+    if (title.length !== 0 && year.length === 0){
+        console.log("title only")
+        title = req.body.title.toLowerCase().replaceAll(" ","+")
+        const apiRequest = (`${url}&t=${title}`)
+        await fetch(apiRequest)
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            res.render("movies/results.ejs", {data})
+        })
+    }
+    if (title.length === 0 && year.length === 0){
+        console.log("no inputs")
+        res.redirect("/movies/add")
+        // res.send("Please enter a movie title")
+        // figure out how to print message then redirect to /add
+    }
+
 })
+
+    // build a link to movie API to get all movies matched, if not return message
+    // res.redirect("/movies/add")
 
 // CREATE/ADD
 // router.post("/", async (req, res) => {
