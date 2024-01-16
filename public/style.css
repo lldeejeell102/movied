@@ -1,0 +1,43 @@
+/* title{
+    color: #FFAD69;
+    color: #41337A;
+    color: #6EA4BF;
+    color: #C2EFEB;
+} */
+
+.title {
+    display: flex;
+    color: black;
+    background: #FFAD69;
+    justify-content: center;
+    text-align: center;
+    font-size: 28px;
+}
+hr{
+    border-bottom: 2px solid #6EA4BF;
+}
+.header-buttons{
+    display:flex;
+    justify-content: space-evenly;
+    padding-top: 1.25rem;
+    padding-bottom: 1.5rem;
+}
+button {
+    background-color: #41337A;
+    border: none;
+    color: whitesmoke;
+    text-align: center;
+    padding: .5rem;
+    cursor: pointer;
+    font-size: 16px;
+}
+.login-form{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    font: Verdana, sans-serif;
+    text-transform: none;
+    background-color: #C2EFEB;
+    border: thin solid #41337A;
+}
