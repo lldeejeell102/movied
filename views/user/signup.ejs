@@ -3,21 +3,37 @@
   <%- include("../partials/head.ejs") %>
   <body>
     <%- include("../partials/header.ejs") %>
-    <main>
-      <div>
-        <form action="/user/signup" method="post">
-          <fieldset>
-            <legend>New User</legend>
-            <label
-              >USERNAME: <input type="text" name="username" required />
-            </label>
-            <label
-              >PASSWORD: <input type="password" name="password" required />
-            </label>
-            <input type="submit" value="Create Account" />
-          </fieldset>
-        </form>
-      </div>
-    </main>
+    <div class="nav-space"></div>
+      <main>
+        <div class="login-form-div">
+          <form action="/user/signup" method="post">
+            <fieldset class="login-form">
+              <legend>New User</legend>
+              <div class="form-inputs">
+                <label class="signup-username">
+                  USERNAME: <input type="text" name="username" required />
+                </label>
+                <label class="signup-password">
+                  PASSWORD: <input type="password" name="password" required />
+                </label>
+                <input type="submit" value="Create Account" />
+              </div>
+            </fieldset>
+          </form>
+        </div class="signup-movie-posters">
+        <div class="login-movie-posters">
+          <div class="poster login-avengers">
+            <img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg">
+          </div>
+          <div class="poster login-barbie">
+            <img src="https://m.media-amazon.com/images/M/MV5BNjU3N2QxNzYtMjk1NC00MTc4LTk1NTQtMmUxNTljM2I0NDA5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg">
+          </div>
+          <div class="poster login-inception">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg">
+          </div>
+          <div class="poster login-aladdin">
+            <img src="https://m.media-amazon.com/images/M/MV5BZTg5ZTVmM2EtZjdhZC00MzBjLWEwZTYtNWIwZDczYzZkMzA4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg">
+          </div>
+      </main>
   </body>
 </html>

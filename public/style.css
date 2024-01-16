@@ -65,11 +65,11 @@ button {
     justify-content: space-evenly;
     align-items: center;
 }
-.login-password{
+.login-password .signup-password{
     padding-left: 1rem;
     padding-right: 1rem;
 }
-.login-movie-posters{
+.login-movie-posters {
     display: flex;
     justify-content: center;
     padding-top: 4rem;
