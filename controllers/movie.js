@@ -24,6 +24,7 @@ router.use((req, res, next) => {
     }
 })
 
+
 //////////////////////////////////////////////////////////////////////////////////
 // ROUTES
 //////////////////////////////////////////////////////////////////////////////////
@@ -54,10 +55,12 @@ router.get("/", async (req, res) => {
     }
 })
 
+
 // NEW
 router.get("/add", (req, res) => {
     res.render("movies/new.ejs")
 })
+
 
 // SEARCH
 router.post("/results", async (req, res) => {
@@ -91,20 +94,15 @@ router.post("/results", async (req, res) => {
     if (title.length === 0 && year.length === 0){
         console.log("no inputs")
         res.redirect("/movies/add")
-        // res.send("Please enter a movie title")
         // figure out how to print message then redirect to /add
     }
-
 })
 
-    // build a link to movie API to get all movies matched, if not return message
-    // res.redirect("/movies/add")
 
 // CREATE/ADD
-// router.post("/", async (req, res) => {
+// router.get("/", async (req, res) => {
 //     try{
-//         // const title = req.body.Title
-//         // const year = req.body.Year
+//         console.log(req.body)
 
 //     }catch(error) {
 //         console.log(error.message)

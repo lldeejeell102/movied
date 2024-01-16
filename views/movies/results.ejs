@@ -4,9 +4,12 @@
 <body>
     <%- include("../partials/header.ejs") %>
     <div>
-        <h1>PLACEHOLDER TITLE</h1>
-        <h1><%= data.Title %></h1>
-        <h1><%= data.Year %></h1>
+        <form action="/movies" method="GET">
+            <h1>PLACEHOLDER TITLE</h1>
+            <h1 name="title" value="<%= data.Title %>"><%= data.Title %></h1>
+            <h1 name="year"><%= data.Year %></h1>
+            <button>Movied!</button>
+        </form>
     </div>
 </body>
 </html>
