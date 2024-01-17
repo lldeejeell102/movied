@@ -100,15 +100,31 @@ router.post("/results", async (req, res) => {
 
 
 // CREATE/ADD
-// router.get("/", async (req, res) => {
-//     try{
-//         console.log(req.body)
-
-//     }catch(error) {
-//         console.log(error.message)
-//         res.send("There was an error, read logs for error details")
-//     }
-// })
+router.post("/", async (req, res) => {
+    try{
+        const poster = req.body.poster
+        const title = req.body.title
+        const year = req.body.year
+        const actors = req.body.actors
+        const plot = req.body.plot
+        const released = req.body.released
+        const username = req.session.username
+        await Movie.create(
+            {Title: title,
+            Year: year,
+            Released: released,
+            Actors: actors,
+            Plot: plot,
+            Poster: poster,
+            username: username,}
+        )
+        console.log()
+        res.redirect("/movies/add")
+    }catch(error) {
+        console.log(error.message)
+        res.send("There was an error, read logs for error details")
+    }
+})
 
 //////////////////////////////////////////////////////////////////////////////////
 // EXPORT ROUTER

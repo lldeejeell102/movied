@@ -4,11 +4,20 @@
 <body>
     <%- include("../partials/header.ejs") %>
     <div>
-        <form action="/movies" method="GET">
+        <form action="/movies" method="POST">
             <h1>PLACEHOLDER TITLE</h1>
             <h1 name="title" value="<%= data.Title %>"><%= data.Title %></h1>
             <h1 name="year"><%= data.Year %></h1>
-            <button>Movied!</button>
+            
+            <button>
+                <input type="hidden" name="title" value="<%= data.Title %>">
+                <input type="hidden" name="year" value="<%= data.Year %>">
+                <input type="hidden" name="poster" value="<%= data.Poster %>">
+                <input type="hidden" name="actors" value="<%= data.Actors %>">
+                <input type="hidden" name="plot" value="<%= data.Plot %>">
+                <input type="hidden" name="released" value="<%= data.Released %>">
+                Movied!
+            </button>
         </form>
     </div>
 </body>
