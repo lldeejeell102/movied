@@ -62,6 +62,53 @@ router.get("/add", (req, res) => {
 })
 
 
+// CREATE/ADD
+router.post("/", async (req, res) => {
+    try{
+        const poster = req.body.poster
+        const title = req.body.title
+        const year = req.body.year
+        const actors = req.body.actors
+        const plot = req.body.plot
+        const released = req.body.released
+        const username = req.session.username
+        await Movie.create(
+            {Title: title,
+            Year: year,
+            Released: released,
+            Actors: actors,
+            Plot: plot,
+            Poster: poster,
+            username: username,}
+        )
+        console.log()
+        res.redirect("/movies")
+    }catch(error) {
+        console.log(error.message)
+        res.send("There was an error, read logs for error details")
+    }
+})
+
+// Delete
+router.delete("/:id", async (req, res) => {
+    const id = req.params.id
+    await Movie.findByIdAndDelete(id)
+    res.redirect("/movies")
+})
+
+
+// SHOW
+router.get("/:id", async (req, res) => {
+    try{
+        const id = req.params.id
+        const movie = await Movie.findById(id)
+        res.render("movies/results.ejs")
+    }catch(error) {
+        console.log(error.message)
+        res.send("There was an error, read logs for error details")
+    }
+})
+
 // SEARCH
 router.post("/results", async (req, res) => {
     let title = req.body.title
@@ -97,35 +144,6 @@ router.post("/results", async (req, res) => {
         // figure out how to print message then redirect to /add
     }
 })
-
-
-// CREATE/ADD
-router.post("/", async (req, res) => {
-    try{
-        const poster = req.body.poster
-        const title = req.body.title
-        const year = req.body.year
-        const actors = req.body.actors
-        const plot = req.body.plot
-        const released = req.body.released
-        const username = req.session.username
-        await Movie.create(
-            {Title: title,
-            Year: year,
-            Released: released,
-            Actors: actors,
-            Plot: plot,
-            Poster: poster,
-            username: username,}
-        )
-        console.log()
-        res.redirect("/movies/add")
-    }catch(error) {
-        console.log(error.message)
-        res.send("There was an error, read logs for error details")
-    }
-})
-
 //////////////////////////////////////////////////////////////////////////////////
 // EXPORT ROUTER
 //////////////////////////////////////////////////////////////////////////////////
