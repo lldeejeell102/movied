@@ -144,7 +144,7 @@ button {
 /* ///////////////////////////////////////////////////////////////////// */
 
 /* ///////////////////////////////////////////////////////////////////// */
-/* INDEX PAGE */
+/* INDEX PAGE - NEW.EJS */
 .search-form-inputs{
     display: flex;
     flex-direction: row;
@@ -174,8 +174,53 @@ button {
     color: black;
     border: 1px solid #0D1B2A;
 }
+.search-movie-form{
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
 /* ///////////////////////////////////////////////////////////////////// */
 
+/* ///////////////////////////////////////////////////////////////////// */
+/* RESULTS PAGE - results.EJS */
+.results-poster{
+    margin-top: 2rem;
+    max-height: 400px;
+    max-width: 400px;
+}
+.results-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #E0E1DD;
+}
+.results-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.results-titles{
+    text-align: center;
+}
+.results-box-1, .results-box-2, .results-box-3, .results-box-4{
+    text-align: center;
+    width: 50%;
+    border-left: 1px solid #0D1B2A;
+    border-right: 1px solid #0D1B2A;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: whitesmoke;
+}
+.results-box-1{
+    margin-top: 3rem;
+    border-top: 1px solid #0D1B2A;
+}
+.results-box-4{
+    margin-bottom: 15px;
+    border-bottom: 1px solid #0D1B2A;
+}
+/* ///////////////////////////////////////////////////////////////////// */
 
 
 /* ///////////////////////////////////////////////////////////////////// */

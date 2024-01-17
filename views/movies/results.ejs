@@ -2,12 +2,25 @@
 <html lang="en">
     <%- include("../partials/head.ejs") %>
 <body>
-    <%- include("../partials/header.ejs", {username}) %>
-    <div>
-        <form action="/movies" method="POST">
-            <h1>PLACEHOLDER TITLE</h1>
-            <h1 name="title" value="<%= data.Title %>"><%= data.Title %></h1>
-            <h1 name="year"><%= data.Year %></h1>
+    <%- include("../partials/header-loggedin.ejs") %>
+    <div class="results-div">
+        <form class="results-form" action="/movies" method="POST">
+            <img class="results-poster" src="<%= data.Poster %>">
+            <div class="results-box-1">
+                <h2> <%= data.Title %></h2>
+            </div>
+            <div class="results-box-2">
+                <h4> <%= data.Released %></h4>
+            </div>
+            <div class="results-box-3">
+                <h3 class="results-titles">Actors:</h3>
+                <h4> <%= data.Actors %></h4>
+            </div>
+            <div class="results-box-4">
+                <h3 class="results-titles">Plot:</h3>
+                <h4> <%= data.Plot %></h4>
+            </div>
+
             
             <button>
                 <input type="hidden" name="title" value="<%= data.Title %>">
