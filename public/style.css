@@ -26,6 +26,12 @@ html{
     min-height: 50px;
     min-width: 100vw;
 }
+.movied-title{
+    font-family: "Grenze Gotisch", serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-size: 42px;    
+}
 .header-buttons{
     display:flex;
     justify-content: space-evenly;
@@ -83,6 +89,56 @@ button {
     max-width: 25%;
     object-fit: contain;
 }
+
+/* ///////////////////////////////////////////////////////////////////// */
+/* INDEX PAGE */
+.movies-index{
+    font-family: "Grenze Gotisch", serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-size: 38px;
+    text-align: center;
+}
+.movies{
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.movie-block{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #415A77;
+    border-radius: 5px;
+    width: 33%;
+    margin: 2rem;
+    padding: .5rem;
+    background-color: #E5E5E5;
+}
+.movie-block-img{
+    object-fit: contain;
+    width: 25%;
+    height: 75%;
+}
+.movie-block-title-date{
+    text-align: center;
+}
+.movie-title .movie-relased .movie-actors .movie-plot{
+    margin: 0;
+    font-family: "Grenze Gotisch", serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    text-align: center;
+}
+/* ///////////////////////////////////////////////////////////////////// */
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////// */
 @media only screen and (max-width: 650px){
     .nav-button{
         display:none;
@@ -92,3 +148,11 @@ button {
         justify-content: space-around;
     }
 }
+/* ///////////////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////////////////// */
+/* Signup and Login Button Hidden */
+/* .login-header{
+    display: none;
+} */
+/* ///////////////////////////////////////////////////////////////////// */

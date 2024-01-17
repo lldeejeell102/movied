@@ -3,14 +3,20 @@
     <%- include("../partials/head.ejs") %>
 <body>
     <%- include("../partials/header.ejs") %>
-    <h1>Watched Movies</h1>
+    <h1 class="movies-index">Watched Movies</h1>
     <div class="movies">
         <% movies.forEach((movies, index) =>{ %>
-            <img src="<%= movies.Poster %>" height="350px"></img>
-            <h2 class="movie-title"><%= movies.Title %></h2>
-            <h3 class="movie-date"><%= movies.Released %></h3>
-            <h3 class="movie-actors"><%= movies.Actors %></h3>
-            <h3 class="movie-plot"><%= movies.Plot %></h3>
+            <div class="movie-block">
+                <img class="movie-block-img" src="<%= movies.Poster %>"></img>
+                <div class="movie-block-title-date">
+                    <h2 class="movie-title"><%= movies.Title %></h1>
+                    <h6 class="movie-released"><%= movies.Released %></h6>
+                </div>
+                <h4 class="starring">Starring:</h4>
+                <h4 class="movie-actors"><%= movies.Actors %></h4>
+                <h6>Plot:</h6>
+                <h6 class="movie-plot"><%= movies.Plot %></h6>
+            </div>
         <% }) %>
     </div>
 </body>
