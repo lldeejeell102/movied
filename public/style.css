@@ -26,6 +26,14 @@ html{
     min-height: 50px;
     min-width: 100vw;
 }
+.mobile-nav-button{
+    display:none;
+}
+button:hover{
+    background-color: #778DA9;
+    color: black;
+    border: 1px solid #0D1B2A;    
+}
 .movied-title{
     font-family: "Grenze Gotisch", serif;
     font-style: normal;
@@ -135,17 +143,65 @@ button {
 }
 /* ///////////////////////////////////////////////////////////////////// */
 
+/* ///////////////////////////////////////////////////////////////////// */
+/* INDEX PAGE */
+.search-form-inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.search-form{
+    padding: 1rem;
+    /* margin-left: 10rem; */
+    /* margin-right: 10rem; */
+    font: Verdana, sans-serif;
+    text-transform: none;
+    background-color: #E0E1DD;
+    border: thin solid #0D1B2A;
+}
+.input-title .input-year{
+    width: 33%;
+}
+.search-button{
+    width: 33%;
+    height: 25%;
+    padding: 5px;
+    transition-duration: .01s;
+}
+.search-button:hover{
+    background-color: #778DA9;
+    color: black;
+    border: 1px solid #0D1B2A;
+}
+/* ///////////////////////////////////////////////////////////////////// */
 
 
 
 /* ///////////////////////////////////////////////////////////////////// */
+/* MOBILE STYLE */
 @media only screen and (max-width: 650px){
     .nav-button{
-        display:none;
+        display: none;
+    }
+    .header-buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-nav-button{
+        display:block;
     }
     .login-form-div{
         display:flex;
         justify-content: space-around;
+    }
+    .search-movie-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .input-title .input-year{
+        width: 10;
     }
 }
 /* ///////////////////////////////////////////////////////////////////// */

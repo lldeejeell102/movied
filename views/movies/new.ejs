@@ -5,11 +5,17 @@
     <%- include("../partials/header-loggedin.ejs") %>
     <div class="search-movie-form">
         <form action="/movies/results" method="POST">
-            <fieldset>
+            <fieldset class="search-form">
                 <legend>Look up a Movie</legend>
-                <input type="text" name="title" placeholder="by title..."> 
-                <input type="text" name="year" placeholder="by year...">
-                <button>Search</button>
+                <div class="search-form-inputs">
+                    <div class="input-title">
+                        <input size="35" type="text" name="title" placeholder="by title..."> 
+                    </div>
+                    <div class="input-year">
+                        <input size="35" class="input-year" type="text" name="year" placeholder="by year...">
+                    </div>
+                    <button class="search-button">Search</button>
+                </div>
             </fieldset>
         </form>
     </div>
