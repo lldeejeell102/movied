@@ -48,7 +48,7 @@ router.get("/", async (req, res) => {
     try{
         const username = req.session.username
         const movies = await Movie.find({username})
-        res.render("movies/index.ejs", {movies})
+        res.render("movies/index.ejs", {movies, username})
     }catch(error) {
         console.log(error.message)
         // res.send("There was an error, read logs for error details")
