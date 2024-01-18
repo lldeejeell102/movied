@@ -24,7 +24,6 @@ router.use((req, res, next) => {
     }
 })
 
-
 //////////////////////////////////////////////////////////////////////////////////
 // ROUTES
 //////////////////////////////////////////////////////////////////////////////////
@@ -42,6 +41,7 @@ router.get("/seed", async (req, res) => {
         res.send("There was an error, read logs for error details")
     }
 })
+
 
 // INDEX
 router.get("/", async (req, res) => {

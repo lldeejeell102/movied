@@ -40,8 +40,7 @@ app.use(session({
 // ROUTES
 //////////////////////////////////////////////////////////////////////////////////
 app.get("", (req, res) => {
-    res.send("It's alive!")
-    // res.redirect(`${URL}&i=tt3896198`)
+    res.redirect("/movies")
 })
 
 app.use("/movies", MovieRouter)
