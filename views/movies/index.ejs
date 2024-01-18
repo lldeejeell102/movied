@@ -8,17 +8,23 @@
         <% movies.forEach((movies, index) =>{ %>
             <div class="movie-block">
                 <img class="movie-block-img" src="<%= movies.Poster %>"></img>
-                <div class="movie-block-title-date">
+                <div class="movie-block-title">
                     <h2 class="movie-title"><%= movies.Title %></h1>
+                </div>
+                <div class="movie-block-date">
                     <h6 class="movie-released"><%= movies.Released %></h6>
                 </div>
-                <h4 class="starring">Starring:</h4>
-                <h4 class="movie-actors"><%= movies.Actors %></h4>
-                <h5>Plot:</h5>
-                <h5 class="movie-plot"><%= movies.Plot %></h5>
+                <div class="movie-block-starring">
+                    <h4 class="starring">Starring:</h4>
+                    <h4 class="movie-actors"><%= movies.Actors %></h4>
+                </div>
+                <div class="movie-block-plot">
+                    <h5 class="plot">Plot:</h5>
+                    <h5 class="movie-plot"><%= movies.Plot %></h5>
+                </div>
                 <form action="/movies/<%= movies._id %>?_method=DELETE" method="POST">
                     <input type="hidden" name="_id" value="<% movies._id %>">
-                    <button>Delete</button>
+                    <button class="delete-button">Delete</button>
                 </form>
             </div>
             <% }) %>
