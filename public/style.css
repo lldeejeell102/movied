@@ -38,7 +38,11 @@ button:hover{
     font-family: "Grenze Gotisch", serif;
     font-style: normal;
     font-optical-sizing: auto;
-    font-size: 42px;    
+    font-size: 42px;
+    color: whitesmoke;
+}
+a#logo-link:active, a#logo-link:visited, a#logo-link:focus, a#logo-link:link  {
+    text-decoration: none;
 }
 .header-buttons{
     display:flex;
