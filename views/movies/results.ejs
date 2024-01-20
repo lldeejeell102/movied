@@ -21,16 +21,18 @@
                 <h4> <%= data.Plot %></h4>
             </div>
 
-            
-            <button>
-                <input type="hidden" name="title" value="<%= data.Title %>">
-                <input type="hidden" name="year" value="<%= data.Year %>">
-                <input type="hidden" name="poster" value="<%= data.Poster %>">
-                <input type="hidden" name="actors" value="<%= data.Actors %>">
-                <input type="hidden" name="plot" value="<%= data.Plot %>">
-                <input type="hidden" name="released" value="<%= data.Released %>">
-                Movied!
-            </button>
+            <div>
+                <h4>Watched Date <input type="date" name="watched"></h4>
+                <button>
+                    <input type="hidden" name="title" value="<%= data.Title %>">
+                    <input type="hidden" name="year" value="<%= data.Year %>">
+                    <input type="hidden" name="poster" value="<%= data.Poster %>">
+                    <input type="hidden" name="actors" value="<%= data.Actors %>">
+                    <input type="hidden" name="plot" value="<%= data.Plot %>">
+                    <input type="hidden" name="released" value="<%= data.Released %>">
+                    Movied!
+                </button>
+            </div>
         </form>
     </div>
 </body>

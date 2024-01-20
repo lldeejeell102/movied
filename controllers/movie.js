@@ -23,7 +23,6 @@ router.use((req, res, next) => {
         res.redirect("/user/signup")
     }
 })
-
 //////////////////////////////////////////////////////////////////////////////////
 // ROUTES
 //////////////////////////////////////////////////////////////////////////////////
@@ -72,6 +71,7 @@ router.post("/", async (req, res) => {
         const plot = req.body.plot
         const released = req.body.released
         const username = req.session.username
+        const watched = req.body.watched
         await Movie.create(
             {Title: title,
             Year: year,
@@ -79,7 +79,8 @@ router.post("/", async (req, res) => {
             Actors: actors,
             Plot: plot,
             Poster: poster,
-            username: username,}
+            Watched: watched,
+            username: username}
         )
         console.log()
         res.redirect("/movies")
@@ -97,12 +98,20 @@ router.delete("/:id", async (req, res) => {
 })
 
 
+// Update
+router.put("/:id", async (req, res) => {
+    const id = req.body.id
+    const date = req.body.newwatched
+    await Movie.findByIdAndUpdate(id, { Watched: date })
+    res.redirect("/movies")
+})
+
 // SHOW
 router.get("/:id", async (req, res) => {
     try{
         const id = req.params.id
         const movie = await Movie.findById(id)
-        res.render("movies/results.ejs")
+        res.render("movies/edit.ejs", {movie})
     }catch(error) {
         console.log(error.message)
         res.send("There was an error, read logs for error details")

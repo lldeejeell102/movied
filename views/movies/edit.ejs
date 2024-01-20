@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head.ejs") %>
+<body>
+    <%- include("../partials/header-loggedin.ejs") %>
+    <div class="edit-div">
+        <form class="edit-form" action="/movies/<%= movie._id %>?_method=PUT" method="POST">
+            <img class="edit-poster" src="<%= movie.Poster %>">
+            <div class="edit-box-1">
+                <h2> <%= movie.Title %></h2>
+            </div>
+            <div class="edit-box-2">
+                <h4> <%= movie.Released %></h4>
+            </div>
+            <div class="edit-box-3">
+                <h3 class="edit-titles">Actors:</h3>
+                <h4> <%= movie.Actors %></h4>
+            </div>
+            <div class="edit-box-4">
+                <h3 class="edit-titles">Plot:</h3>
+                <h4> <%= movie.Plot %></h4>
+            </div>
+            <div class="edit-box-5">
+                <h3 class="edit-titles">Watched Date:</h3>
+                <h4> <%= movie.Watched %></h4>
+            </div>
+
+            <div>
+                <h4>Watched Date <input type="date" name="newwatched"></h4>
+                <button>
+                    <input type="hidden" name="id" value="<%= movie._id %>">
+                    <input type="hidden" name="title" value="<%= movie.Title %>">
+                    <input type="hidden" name="year" value="<%= movie.Year %>">
+                    <input type="hidden" name="poster" value="<%= movie.Poster %>">
+                    <input type="hidden" name="actors" value="<%= movie.Actors %>">
+                    <input type="hidden" name="plot" value="<%= movie.Plot %>">
+                    <input type="hidden" name="released" value="<%= movie.Released %>">
+                    Update!
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

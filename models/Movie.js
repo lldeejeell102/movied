@@ -21,6 +21,7 @@ const movieSchema = new mongoose.Schema({
     Plot: String,
     Poster: String,
     username: String,
+    Watched: String,
 }, {timestamps: true});
 
 // Model - object for interacting with the db
