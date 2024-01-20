@@ -25,9 +25,11 @@
                 <h4> <%= movie.Watched %></h4>
             </div>
 
-            <div>
-                <h4>Watched Date <input type="date" name="newwatched"></h4>
-                <button>
+            <div class="submit">
+                <div class="watch-date">
+                    <h4>Watched Date: <input type="date" name="newwatched"></h4>
+                </div>
+                <button class="update">
                     <input type="hidden" name="id" value="<%= movie._id %>">
                     <input type="hidden" name="title" value="<%= movie.Title %>">
                     <input type="hidden" name="year" value="<%= movie.Year %>">

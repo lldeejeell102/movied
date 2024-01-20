@@ -23,16 +23,18 @@
                     <h5 class="movie-plot"><%= movies.Plot %></h5>
                 </div>
                 <div class="movie-block-watched-date">
-                    <h5 class="plot">Watched Date:</h5>
-                    <h5 class="movie-plot"><%= movies.Watched %></h5>
+                    <h5 class="starring">Watched Date:</h5>
+                    <h5 class="movie-actors"><%= movies.Watched %></h5>
                 </div>
-                <form action="/movies/<%= movies._id %>" method="GET">
-                    <button class="update-button">Update</button>
-                </form>
-                <form action="/movies/<%= movies._id %>?_method=DELETE" method="POST">
-                    <input type="hidden" name="_id" value="<% movies._id %>">
-                    <button class="delete-button">Delete</button>
-                </form>
+                <div class="index-forms">
+                    <form action="/movies/<%= movies._id %>" method="GET">
+                        <button class="update-button">Update</button>
+                    </form>
+                    <form action="/movies/<%= movies._id %>?_method=DELETE" method="POST">
+                        <input type="hidden" name="_id" value="<% movies._id %>">
+                        <button class="delete-button">Delete</button>
+                    </form>
+                </div>
             </div>
             <% }) %>
             <!-- <#% console.log(movies[1]) %> -->

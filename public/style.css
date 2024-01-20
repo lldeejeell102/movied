@@ -134,6 +134,7 @@ button {
     object-fit: contain;
     width: 45%;
     height: 75%;
+    padding: 1rem;
 }
 .movie-block-title-date{
     text-align: center;
@@ -148,12 +149,16 @@ button {
     height: 50%;
 }
 
-.movie-block-title, .movie-block-date, .movie-block-starring, .movie-block-plot{
+.movie-actors, .movie-plot{
+    text-align: center;
+}
+
+.movie-block-title, .movie-block-date, .movie-block-starring, .movie-block-plot, .movie-block-watched-date{
     display:flex;
     /* flex-direction: column; */
     width: 100%;
 }
-.movie-block-title, .movie-block-date{
+.movie-block-title, .movie-block-date, .movie-block-watched-date{
     justify-content: center;
 }
 
@@ -162,8 +167,14 @@ button {
     text-align: left;
 }
 
-.delete-button{
-    width: 10rem;
+.index-forms{
+    display: flex;
+    flex-direction: row;
+}
+
+.delete-button, .update-button{
+    width: 6rem;
+    margin: 1rem;
 }
 
 @keyframes bounceKeyFrame {
@@ -176,7 +187,7 @@ button {
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
 }
-.delete-button:hover{
+.delete-button:hover, .update-button:hover{
     animation: bounceKeyFrame 1s infinite;
 }
 /* ///////////////////////////////////////////////////////////////////// */
@@ -219,29 +230,32 @@ button {
 }
 /* ///////////////////////////////////////////////////////////////////// */
 
-/* ///////////////////////////////////////////////////////////////////// */
 /* RESULTS PAGE - results.EJS */
-.results-poster{
+/* EDIT PAGE - edit.EJS */
+/* ///////////////////////////////////////////////////////////////////// */
+.results-poster, .edit-poster{
     margin-top: 2rem;
     max-height: 400px;
     max-width: 400px;
 }
-.results-div{
+.results-div, .edit-div{
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: #E0E1DD;
+    margin: 2rem;
+    padding-bottom: 2rem;
 }
-.results-form{
+.results-form, .edit-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.results-titles{
+.results-titles, .edit-titles{
     text-align: center;
 }
-.results-box-1, .results-box-2, .results-box-3, .results-box-4{
+.results-box-1, .results-box-2, .results-box-3, .results-box-4, .edit-box-1, .edit-box-2, .edit-box-3, .edit-box-4, .edit-box-5{
     text-align: center;
     width: 50%;
     border-left: 1px solid #0D1B2A;
@@ -250,13 +264,21 @@ button {
     padding-right: 2rem;
     background-color: whitesmoke;
 }
-.results-box-1{
+.results-box-1, .edit-box-1{
     margin-top: 3rem;
     border-top: 1px solid #0D1B2A;
 }
-.results-box-4{
+.results-box-4, .edit-box-5{
     margin-bottom: 15px;
     border-bottom: 1px solid #0D1B2A;
+}
+
+.submit{
+    display:flex;
+    flex-direction: column;
+}
+.watch-date{
+    padding: 1rem;
 }
 /* ///////////////////////////////////////////////////////////////////// */
 

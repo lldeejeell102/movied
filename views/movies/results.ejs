@@ -21,9 +21,13 @@
                 <h4> <%= data.Plot %></h4>
             </div>
 
-            <div>
-                <h4>Watched Date <input type="date" name="watched"></h4>
-                <button>
+            <div class="submit">
+                <div class="watch-date">
+                    <h4 id="watched-date">Watched Date:
+                        <input type="date" class="watched" name="watched">
+                    </h4>
+                </div>
+                <button class="movied">
                     <input type="hidden" name="title" value="<%= data.Title %>">
                     <input type="hidden" name="year" value="<%= data.Year %>">
                     <input type="hidden" name="poster" value="<%= data.Poster %>">
