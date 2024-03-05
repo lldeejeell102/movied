@@ -188,7 +188,7 @@ button {
     align-items: center;
     border: 2px solid #415A77;
     border-radius: 5px;
-    width: 33%;
+    width: 33vw;
     margin: 2rem;
     padding: .5rem;
     background-color: #E5E5E5;
@@ -370,6 +370,9 @@ button {
     }
     .input-title .input-year{
         width: 10;
+    }
+    .movie-block{
+        width: 85vw;
     }
 }
 /* ///////////////////////////////////////////////////////////////////// */
